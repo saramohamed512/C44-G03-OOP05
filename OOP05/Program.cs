@@ -1,4 +1,5 @@
 ﻿using OOP05.Binding;
+using OOP05.Example01Interface;
 using OOP05.Interface;
 using Type = OOP05.Interface.Type;
 
@@ -32,6 +33,21 @@ namespace OOP05
             }
         }
         #endregion
+        #region example01 interface
+        public  static void SeriesToPrintFiveNums(ISeries series)
+        {
+            if (series is not null)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine($"Current value in series: {series.Current}");
+                    series.GetNextValue();
+                }
+                series.ResetSeries(); // Calls the default implementation of ResetSeries
+            }
+            else { return; }
+        }
+        #endregion
         static void Main(string[] args)
         {
             #region Binding 
@@ -60,6 +76,10 @@ namespace OOP05
             //typeIO.MyProperty = 200;
             //typeIO.MyMethod(); // Calls MyMethod from TypeIO class
             ////typeIO.Print(); // invalid, as Print is not defined in TypeIO class
+            #region Ex01 
+            //SeriesOne s1= new SeriesOne();
+            //SeriesToPrintFiveNums(s1); // Prints 5 values in SeriesOne
+            #endregion
 
             #endregion
         }
