@@ -1,4 +1,5 @@
 ﻿using OOP05.Binding;
+using OOP05.BuiltInInterface;
 using OOP05.Example01Interface;
 using OOP05.Example02Interface;
 using OOP05.Interface;
@@ -100,7 +101,25 @@ namespace OOP05
 
 
             #endregion
+            #region Built-in Interfaces
+            #region ICloneable
+           User user01 = new User() { Id = 1, Name = "John Doe"  ,Salary=1000};
+            User user02 = new User() { Id = 2, Name = "Jane Smith", Salary = 2000 };
+            Console.WriteLine($"user01: {user01.GetHashCode}");
+            Console.WriteLine($"user02: {user02.GetHashCode}");
+            Console.WriteLine($"user01: {user01}"); 
+            Console.WriteLine($"user02: {user02}");
+            Console.WriteLine("Before cloning:");
+            Console.WriteLine("Cloning user01 to user02...");
+            user02 =(User)user01.Clone(); // Cloning user01 to user02
+            Console.WriteLine($"user01: {user01.GetHashCode}");
+            Console.WriteLine($"user02: {user02.GetHashCode}");
+            Console.WriteLine($"user01: {user01}");
+            Console.WriteLine($"user02: {user02}");
+            Console.WriteLine("after cloning:");
+            #endregion
 
+            #endregion
             #endregion
         }
     }
