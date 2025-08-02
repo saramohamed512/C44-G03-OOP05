@@ -1,5 +1,6 @@
 ﻿using OOP05.Binding;
 using OOP05.Example01Interface;
+using OOP05.Example02Interface;
 using OOP05.Interface;
 using Type = OOP05.Interface.Type;
 
@@ -79,6 +80,25 @@ namespace OOP05
             #region Ex01 
             //SeriesOne s1= new SeriesOne();
             //SeriesToPrintFiveNums(s1); // Prints 5 values in SeriesOne
+            #endregion
+            #region Ex02
+            Car car = new Car();
+            //car.Forward(); // Calls Forward method from IMoveOnAir interface
+            //car.Backward(); // Calls Backward method from IMoveOnGround interface   
+            //car.left(); // Calls left method from IMoveOnAir interface
+            //car.Right(); // Calls Right method from IMoveOnGround interface
+            AirPlane airPlane = new AirPlane();
+            //airPlane.Forward(); // Calls Forward method from IMoveOnAir interface
+            //airPlane.Backward(); // Calls Backward method from IMoveOnGround interface
+            //airPlane.left(); // Calls left method from IMoveOnAir interface
+            //airPlane.Right();
+            //IMoveOnAir moveOnAir= new AirPlane();
+            //IMoveOnGround moveOnGround = new AirPlane();
+            //IMoveOnGround moveOnGround2 = new Car();
+            //moveOnGround2.Backward(); // Calls Backward method from IMoveOnGround interface
+
+
+
             #endregion
 
             #endregion
