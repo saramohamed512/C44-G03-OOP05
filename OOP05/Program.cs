@@ -1,8 +1,10 @@
-﻿using OOP05.Binding;
+﻿using OOP05.Abstraction;
+using OOP05.Binding;
 using OOP05.BuiltInInterface;
 using OOP05.Example01Interface;
 using OOP05.Example02Interface;
 using OOP05.Interface;
+using System.Drawing;
 using Type = OOP05.Interface.Type;
 
 namespace OOP05
@@ -135,13 +137,26 @@ namespace OOP05
             //}
             #endregion
             #region Icomparer
-            Array.Sort(users, new UserNameComparer()); // Sorts users based on Id using UserComparer
-            foreach (var user in users)
-            {
-                Console.WriteLine(user); // Prints sorted users
-            }
+            //Array.Sort(users, new UserNameComparer()); // Sorts users based on Id using UserComparer
+            //foreach (var user in users)
+            //{
+            //    Console.WriteLine(user); // Prints sorted users
+            //}
             #endregion
             #endregion
+            #endregion
+            #region Abstraction
+            //Shape rectangle = new Abstraction.Rectangle() { Dim01 = 5,Dim02=10 };
+            //decimal area= rectangle.CalcArea();
+            //Console.WriteLine($"Area of Rectangle: {area}");
+            //decimal perimeter = rectangle.Perimeter;
+            //Console.WriteLine($"Perimeter of Rectangle: {perimeter}");
+            //Circle circle = new Circle(5);
+            //area = circle.CalcArea();
+            //Console.WriteLine($"Area of Circle: {area}");
+            //perimeter = circle.Perimeter;
+            //Console.WriteLine("Perimeter of Circle: " + perimeter);
+
             #endregion
         }
     }
