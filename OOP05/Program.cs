@@ -103,22 +103,44 @@ namespace OOP05
             #endregion
             #region Built-in Interfaces
             #region ICloneable
-           User user01 = new User() { Id = 1, Name = "John Doe"  ,Salary=1000};
-            User user02 = new User() { Id = 2, Name = "Jane Smith", Salary = 2000 };
-            Console.WriteLine($"user01: {user01.GetHashCode}");
-            Console.WriteLine($"user02: {user02.GetHashCode}");
-            Console.WriteLine($"user01: {user01}"); 
-            Console.WriteLine($"user02: {user02}");
-            Console.WriteLine("Before cloning:");
-            Console.WriteLine("Cloning user01 to user02...");
-            user02 =(User)user01.Clone(); // Cloning user01 to user02
-            Console.WriteLine($"user01: {user01.GetHashCode}");
-            Console.WriteLine($"user02: {user02.GetHashCode}");
-            Console.WriteLine($"user01: {user01}");
-            Console.WriteLine($"user02: {user02}");
-            Console.WriteLine("after cloning:");
+            //User user01 = new User() { Id = 1, Name = "John Doe"  ,Salary=1000};
+            // User user02 = new User() { Id = 2, Name = "Jane Smith", Salary = 2000 };
+            // Console.WriteLine($"user01: {user01.GetHashCode}");
+            // Console.WriteLine($"user02: {user02.GetHashCode}");
+            // Console.WriteLine($"user01: {user01}"); 
+            // Console.WriteLine($"user02: {user02}");
+            // Console.WriteLine("Before cloning:");
+            // Console.WriteLine("Cloning user01 to user02...");
+            // user02 =(User)user01.Clone(); // Cloning user01 to user02
+            // Console.WriteLine($"user01: {user01.GetHashCode}");
+            // Console.WriteLine($"user02: {user02.GetHashCode}");
+            // Console.WriteLine($"user01: {user01}");
+            // Console.WriteLine($"user02: {user02}");
+            // Console.WriteLine("after cloning:");
             #endregion
-
+            #region IComparable
+            //int[] numbers = { 6, 3, 1, 2, 5 , 4};
+            User[] users =
+            {
+                new User() { Id = 1, Name = "Alice", Salary = 3000 },
+                new User() { Id = 2, Name = "Bob", Salary = 2000 },
+                new User() { Id = 3, Name = "Charlie", Salary = 4000 },
+                new User() { Id = 4, Name = "David", Salary = 1000 }
+            };
+            //Array.Sort(users); // Sorts users based on Salary using CompareTo method
+            //Array.Sort(numbers); // Sorts numbers in ascending order
+            //foreach (var user in users)
+            //{
+            //    Console.WriteLine(user); // Prints sorted users
+            //}
+            #endregion
+            #region Icomparer
+            Array.Sort(users, new UserNameComparer()); // Sorts users based on Id using UserComparer
+            foreach (var user in users)
+            {
+                Console.WriteLine(user); // Prints sorted users
+            }
+            #endregion
             #endregion
             #endregion
         }
