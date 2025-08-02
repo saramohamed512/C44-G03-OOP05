@@ -1,4 +1,6 @@
 ﻿using OOP05.Binding;
+using OOP05.Interface;
+using Type = OOP05.Interface.Type;
 
 namespace OOP05
 {
@@ -41,10 +43,24 @@ namespace OOP05
             // type.Fun02(); // Calls TypeB's Fun02 due to 'override' keyword in TypeB
             #endregion
             #region example02
-            Employee fullTimeEmp = new FullTimeEmp();
-            Employee partTimeEmp = new PartTimeEmp();
-            ProcessEmployee(fullTimeEmp); // Calls FullTimeEmp's Fun01 and Fun02
+            //Employee fullTimeEmp = new FullTimeEmp();
+            //Employee partTimeEmp = new PartTimeEmp();
+            //ProcessEmployee(fullTimeEmp); // Calls FullTimeEmp's Fun01 and Fun02
             #endregion
+            #endregion
+            #region interface
+            //IType refType;
+            ////Type type = new Type();//invalid
+            ////refType = new Type(); // valid, as Type implements IType
+            //refType = new TypeIO(); // valid, as Type implements IType
+            //refType.MyProperty = 100;
+            //refType.MyMethod(); // Calls MyMethod from TypeIO class
+            //refType.Print(); // Calls default Print method from IType interface
+            //TypeIO typeIO = new TypeIO();
+            //typeIO.MyProperty = 200;
+            //typeIO.MyMethod(); // Calls MyMethod from TypeIO class
+            ////typeIO.Print(); // invalid, as Print is not defined in TypeIO class
+
             #endregion
         }
     }
