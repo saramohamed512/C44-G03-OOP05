@@ -1,5 +1,6 @@
 ﻿using assignmentOOP05.Q01;
 using assignmentOOP05.Q02;
+using assignmentOOP05.Q03;
 
 namespace assignmentOOP05
 {
@@ -23,7 +24,19 @@ namespace assignmentOOP05
 
             //Console.WriteLine($"Authentication: {isAuthenticated}");
             //Console.WriteLine($"Authorization: {isAuthorized}");
-    
+
+            #endregion
+            #region Q03
+            //INotificationService emailService = new EmailNotificationService();
+            //INotificationService smsService = new SmsNotificationService();
+            //INotificationService pushService = new PushNotificationService();
+
+            //string recipient = "user@example.com";
+            //string message = "Hello, this is a notification!";
+
+            //emailService.SendNotification(recipient, message);
+            //smsService.SendNotification("+1234567890", message);
+            //pushService.SendNotification("device-id-123", message);
             #endregion
 
         }
